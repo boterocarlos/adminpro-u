@@ -8,6 +8,12 @@ import { Graficas1Component } from './graficas1/graficas1.component';
 import { LayoutsModule } from '../layouts/layouts.module';
 // Rutas
 import { PAGES_ROUTES } from './pages.routes';
+import { FormsModule } from '@angular/forms';
+import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
+//
+import { ChartsModule } from 'ng2-charts';
+import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.component';
+//
 
 
 @NgModule({
@@ -15,7 +21,9 @@ import { PAGES_ROUTES } from './pages.routes';
         PagesComponent,
         DashboardComponent,
         ProgressComponent,
-        Graficas1Component
+        Graficas1Component,
+        IncrementadorComponent,
+        GraficoDonaComponent
     ],
     exports: [
         DashboardComponent,
@@ -24,7 +32,9 @@ import { PAGES_ROUTES } from './pages.routes';
     ],
     imports: [
       LayoutsModule,
-      PAGES_ROUTES
+      PAGES_ROUTES,
+      FormsModule,
+      ChartsModule
     ]
 })
 export class PagesModule { }
